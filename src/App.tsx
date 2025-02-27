@@ -1,9 +1,13 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Ma bibliothèque de Simpsons</h1>
+      <header className="p-4 bg-lightgray">
+        <h1 className="text-center">Ma bibliothèque de Simpsons</h1>
+      </header>
+      <Outlet />
     </>
   );
 }
