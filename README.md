@@ -22,7 +22,7 @@
 
 Dans ce workshop, nous allons nous servir de l'API simpsons [Doc](https://www.postman.com/simpsons-team).
 
-## Petit tour du propriétaire
+## 2. Petit tour du propriétaire
 
 :warning: Pour faciliter la mise en place d'un style minimaliste et rapide, un lien cdn Boostrap est mis dans le `index.html`.
 
