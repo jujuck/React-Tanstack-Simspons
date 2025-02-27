@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <header className="p-4 bg-lightgray">
-        <h1 className="text-center">Ma bibliothèque de Simpsons</h1>
+        <h1 className="text-center">Ma bibliothèque de Country</h1>
       </header>
       <Outlet />
     </>

@@ -20,14 +20,37 @@
 - clone le projet
 - install les dépendances
 
-Dans ce workshop, nous allons nous servir de l'API simpsons [Doc](https://www.postman.com/simpsons-team).
+Dans ce workshop, nous allons nous servir de l'API Country [Doc](https://restcountries.com/#endpoints).
 
 ## 2. Petit tour du propriétaire
 
 :warning: Pour faciliter la mise en place d'un style minimaliste et rapide, un lien cdn Boostrap est mis dans le `index.html`.
 
 - React router est mis en place et implémenté dans `main.tsx`
-- Il y a deux pages enfants de `App.tsx`: `<Home/>`pour la racine et `<OneSimpsons />`pour l'uri "/simpsons/:id"
-- Des composants fonctionnels sont déjà mis en place : `<SimpsonsCard />`, `<SimpsonsDetails />`et `<SideMenu />`
+- Il y a deux pages enfants de `App.tsx`: `<Home/>`pour la racine et `<OneCountry />`pour l'uri "/Country/:id"
+- Des composants fonctionnels sont déjà mis en place : `<CountryCard />`, `<CountryDetails />`et `<SideMenu />`
 
-##Pou
+## 3. Intégration de tanstack Query
+
+```bash
+npm i @tanstack/react-query
+```
+
+Implémentation du client dans `main.tsx` pour une gestion globale du cache.
+
+```typescript
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+...
+
+const queryClient = new QueryClient()
+
+...
+<StrictMode>
+ <QueryClientProvider client={queryClient}>
+    <RouterProvider router={router} />
+  </QueryClientProvider>
+</StrictMode>
+```

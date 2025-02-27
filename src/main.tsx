@@ -3,7 +3,9 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import Home from "./pages/Home.tsx";
-import OneSimpsons from "./pages/OneSimpsons.tsx";
+import OneCountry from "./pages/OneCountry.tsx";
+
+import { getAllCountry } from "./services/country.ts";
 
 const router = createBrowserRouter([
   {
@@ -13,10 +15,14 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+        loader: async () => {
+          const result = await getAllCountry();
+          return result;
+        },
       },
       {
-        path: "/simpsons/:id",
-        element: <OneSimpsons />,
+        path: "/country/:id",
+        element: <OneCountry />,
       },
     ],
   },
