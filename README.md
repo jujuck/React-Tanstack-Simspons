@@ -6,6 +6,7 @@
 
 💡 Pourquoi TanStack Query est meilleur qu'un refetch manuel ?
 | Critère | Refetch classique (useEffect + fetch) | TanStack Query |
+|--- |--- |--- |
 | 🔁 Évite les requêtes inutiles | ❌ Chaque composant refait un fetch indépendant | ✅ Mutualise les requêtes identiques
 | ⏳ Gestion du cache | ❌ Doit être codée à la main | ✅ Automatique avec staleTime et cacheTime
 | 🔄 Mises à jour après mutation | ❌ Nécessite un useEffect supplémentaire | ✅ Automatique avec invalidateQueries
